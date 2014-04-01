@@ -17,8 +17,7 @@ def calculate_meal_costs(meal_base, tax_rate, tip_rate):
                     tax_value=tax_value,
                     tip_value=tip_value,
                     total = total)
-    return meal_info
- 
+    return meal_info 
  
 def main():
     meal_input = sys.argv[1]
@@ -26,31 +25,34 @@ def main():
         try:
             meal_input = float(meal_input)
             break
-            meal_input = raw_input("Please enter a number as an input parameter for the meal")
+            meal_input = raw_input("Please enter a number as an" 
+                                    "input parameter for the meal")
         except ValueError:
-            meal_input =raw_input("Please enter a number as an input parameter for the meal")
+            meal_input =raw_input("Please enter a number as an"
+                                   "input parameter for the meal")
             
     tax_rate_input = sys.argv[2]
     while True:
         try:
             tax_rate_input = float(tax_rate_input)
             break
-            tax_rate_input = raw_input("Please enter a number as an input parameter for the tax rate")
+            tax_rate_input = raw_input("Please enter a number as an input" 
+                                        "parameter for the tax rate")
         except ValueError:
-            tax_rate_input = raw_input("Please enter a number as an input parameter for the tax rate")
+            tax_rate_input = raw_input("Please enter a number as an input"
+                                        "parameter for the tax rate")
             
     tip_rate_input = sys.argv[3]
     while True:
         try:
             tip_rate_input = float(tip_rate_input)
             break
-            tip_rate_input = raw_input("Please enter a number as an input parameter for the tip rate")
+            tip_rate_input = raw_input("Please enter a number as an input"
+                                        "parameter for the tip rate")
         except ValueError:
-            tip_rate_input = raw_input("Please enter a number as an input parameter for the tip rate")
-        
-            
-
-        
+            tip_rate_input = raw_input("Please enter a number as an input"
+                                       "parameter for the tip rate")
+                                               
     meal_info = calculate_meal_costs(meal_input, tax_rate_input, 
                                     tip_rate_input)
  
